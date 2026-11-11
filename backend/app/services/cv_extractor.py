@@ -1,4 +1,4 @@
-import fitz
+import pymupdf
 #fitz pyMupdf libraray ko import krtaha is ka name python me fitz ha
 from docx import Document
 from pathlib import Path
@@ -6,7 +6,7 @@ import re
 def extract_pdf_text(file_path:str)->str:
     text=""
 
-    with fitz.open(file_path) as pdf:
+    with pymupdf.open(file_path) as pdf:
         for page in pdf :
             page_text=page.get_text()
             text+=page_text+"\n"
