@@ -1,0 +1,75 @@
+# ==============================
+# ENVIRONMENT VARIABLES & SECRETS
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# PYTHON
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ==============================
+# BACKEND STORAGE
+# ==============================
+backend/storage/cvs/
+backend/storage/temp/
+backend/storage/processed/
+
+# ==============================
+# FRONTEND / NODE
+# ==============================
+node_modules/
+dist/
+build/
+.vite/
+
+# ==============================
+# IDE & EDITORS
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==============================
+# OPERATING SYSTEM
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# LOGS
+# ==============================
+*.log
+logs/
+
+# ==============================
+# DATABASE / BACKUPS
+# ==============================
+*.sql
+*.dump
+*.bak
+
+# ==============================
+# TEMPORARY FILES
+# ==============================
+*.tmp
+*.temp

@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: hr_postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: hr_admin
+      POSTGRES_PASSWORD: hr_dev_password
+      POSTGRES_DB: hr_recruitment_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hr_admin -d hr_recruitment_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
